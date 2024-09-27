@@ -1,21 +1,453 @@
 <!DOCTYPE html>
 <html lang="nl">
-	
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Howdy FED2425</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Born to bloom | Cabau Lifestyle</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-	<h1>Howdy FED2425</h1>
 
-	<script defer src="scripts/script.js"></script>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="left-section">
+        <div class="hamburger">
+          <span class="hamburger-menu">
+            <img src="images/hamburger.png" alt="hamburgermenu">
+          </span>
+        </div>
+        <div class="logo">
+          <img src="images/logo.avif" alt="Logo" />
+        </div>
+      </div>
+      <div class="icons">
+        <a href="#"><i class="icon"><img src="images/community-icon.png" alt="community"></i></a>
+        <a href="#"><i class="icon"><img src="images/search-icon.png" alt="zoeken"></i></a>
+        <a href="#"><i class="icon"><img src="images/winkelwagen-icon.png" alt="winkelwagen"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="overlay-container">
+      <h4 class="overlay-text">Korting tot 48%</h4>
+      <h2 class="overlay-text">Bloom Bundels</h2>
+      <h3 class="overlay-text">Val af op jouw manier met onze voordeelbundels: kies voor een voedingssschema, flexibele
+        aanpak of snelle detox!</h3>
+
+      <div class="button-container">
+        <button class="split-button left">Onze voordeelbundels</button>
+        <button class="split-button right">Alle producten</button>
+      </div>
+    </div>
+
+    <img class="home-image" src="images/homepage.jpg.webp" alt="Yolanthe Cabau">
+
+
+
+    <h2>Cabau Essentials</h2>
+    <h3>Wat zijn de favoriete producten die de Cabau community helpen om elke dag tot het uiterste te gaan</h3>
+
+    <section id="gewoonScrollen" class="caroCarrousel" aria-label="Voorbeeld met gewoon scrollen">
+      <ul>
+        <li id="element1">
+          <img src="images/high-protein-meal.webp" alt="high protein meal" />
+          <h6>High Protein Meal</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€28,95</p>
+        </li>
+
+        <li id="element2"><img src="images/bloom-waterfles.webp" alt="bloom waterfles" />
+          <h6>Bloom Waterfles</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€18,95</p>
+        </li>
+
+        <li id="element3"><img src="images/21-day-weightloss-challenge.jpg" alt="21-day weight loss challenge" />
+          <h6>21-Day Weight Loss Challenge</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€118,65</p>
+        </li>
+
+        <li id="element4"><img src="images/fatburner.webp" alt="fatburner" />
+          <h6>Fatburner</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€28,95</p>
+        </li>
+
+        <li id="element5"><img src="images/protein-oats.webp" alt="protein oats" />
+          <h6>Protein Oats</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€22,95</p>
+        </li>
+
+        <li id="element6"><img src="images/fatburner-tryout-box.webp" alt="fatburner tryout box" />
+          <h6>Fatburner Try-Out Box</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€9,95</p>
+        </li>
+
+        <li id="element7"><img src="images/hair-vitamin.webp" alt="hair vitamines - biotine" />
+          <h6>Hair Vitamines - Biotine</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€19,95</p>
+        </li>
+
+        <li id="element8"><img src="images/protein-shake.webp" alt="protein shake" />
+          <h6>Protein Shake</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€34,95</p>
+        </li>
+
+        <li id="element9"><img src="images/vitamin-boost.webp" alt="vitamin-boost" />
+          <h6>Vitamin Boost</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€24,95</p>
+        </li>
+
+        <li id="element10"><img src="images/protein-bars.webp" alt="protein bars" />
+          <h6>Protein Bar</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€28,95</p>
+        </li>
+
+        <li id="element11"><img src="images/protein-pancakes.webp" alt="protein pancakes" />
+          <h6>Protein Pancakes</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€25,95</p>
+        </li>
+
+        <li id="element12"><img src="images/protein-pops.webp" alt="protein pops" />
+          <h6>Protein Pops</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€12,95</p>
+        </li>
+
+        <li id="element13"><img src="images/sleepwell.webp" alt="sleep well" />
+          <h6>Sleep Well</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€32,95</p>
+        </li>
+
+        <li id="element14"><img src="images/bloom-mixer.webp" alt="bloom mixer" />
+          <h6>Bloom Mixer</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€12,95</p>
+        </li>
+
+        <li id="element15"><img src="images/resistance-tubes.webp" alt="resistance tubes kit" />
+          <h6>Resistance Tubes Kit</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€19,95</p>
+        </li>
+
+        <li id="element16"><img src="images/fatburner-capsules.webp" alt="fatburner capsules" />
+          <h6>Fatburner Capsules</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€27,95</p>
+        </li>
+
+        <li id="element17"><img src="images/shaker.webp" alt="shaker" />
+          <h6>Shaker</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€5,95</p>
+        </li>
+
+        <li id="element18"><img src="images/5-day-detox-pack.webp" alt="5 day detox pack" />
+          <h6>5-Day Detox Pack</h6>
+          <img src="images/4-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€39,95</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <h2>New Arrivals</h2>
+    <h3>Ontdek de nieuwe Cabau goodies!</h3>
+
+    <section id="gewoonScrollen" class="caroCarrousel" aria-label="Voorbeeld met gewoon scrollen">
+      <ul>
+        <li id="element19"><img src="images/lavender-pack.webp" alt="lavender pack" />
+          <h6>Lavender Pack</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€80,00</p>
+        </li>
+
+        <li id="element20"><img src="images/pistachio-green-pack.webp" alt="pistachio green pack" />
+          <h6>Pistachio Green Pack</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€80,00</p>
+        </li>
+
+        <li id="element21"><img src="images/bloom-socks.webp" alt="bloom socks (3 pack)" />
+          <h6>Bloom Socks (3-Pack)</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€14,95</p>
+        </li>
+
+        <li id="element22"><img src="images/bloom-shaker-thermo.webp" alt="bloom shaker thermo" />
+          <h6>Bloom Shaker - Thermo</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€12,95</p>
+        </li>
+
+        <li id="element23"><img src="images/protein-lemonade.webp" alt="protein lemonde" />
+          <h6>Protein Lemonade</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€34,95</p>
+        </li>
+
+        <li id="element24"><img src="images/bloom-summer-bottle.webp" alt="bloom summer bottle" />
+          <h6>Bloom Summer Bottle</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€18,95</p>
+        </li>
+
+        <li id="element25"><img src="images/hoodie.webp" alt="hoodie" />
+          <h6>hoodie</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€49,95</p>
+        </li>
+
+        <li id="element26"><img src="images/t-shirt.webp" alt="t shirt" />
+          <h6>T-shirt</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€29,95</p>
+        </li>
+
+        <li id="element27"><img src="images/protein-pops.webp" alt="protein pops" />
+          <h6>Protein Pops</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€12,95</p>
+        </li>
+
+        <li id="element28"><img src="images/protein-bars.webp" alt="protein bars" />
+          <h6>Protein Bar</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€28,95</p>
+        </li>
+
+        <li id="element29"><img src="images/fatburner-tryout-box.webp" alt="fatburner tryout box" />
+          <h6>Fatburner Try-Out Box</h6>
+          <img src="images/4.5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€9,95</p>
+        </li>
+
+        <li id="element30"><img src="images/bloom-journal.webp" alt="bloom journal" />
+          <h6>Bloom Journal</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€22,95</p>
+        </li>
+      </ul>
+    </section>
+
+    <img class="yolanthe-image" src="images/cabau-quiz.webp" alt="Yolanthe Cabau met fles">
+    <div class="achtergrond-container">
+      <h4>Cabau Quiz</h4>
+      <h2>Weet je niet zeker wat je nodig hebt?</h2>
+      <h3>Ontdek met een paar korte vragen welke producten perfect bij jou passen. Doe de Cabau Quiz en ontvang direct
+        een persoonlijk advies op maat. Let's bloom together!</h3>
+      <button class="button-style"> Doe de Cabau Quiz</button>
+    </div>
+
+    <h2>Discount Packs</h2>
+    <h3>Exclusief samengestelde pakketten met de hoogste kortingen.</h3>
+
+    <section id="gewoonScrollen" class="caroCarrousel" aria-label="Voorbeeld met gewoon scrollen">
+      <ul>
+        <li id="element31"><img src="images/21-day-weightloss-challenge.jpg" alt="21 day weight loss challenge" />
+          <h6>21-Day Weight Loss Challenge</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€118,65</p>
+        </li>
+
+        <li id="element32"><img src="images/back-in-shape-pack.webp" alt="back in shape pack" />
+          <h6>Back in Shape Pack</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€93,80</p>
+        </li>
+
+        <li id="element33"><img src="images/5-day-detox-pack.webp" alt="5 day detox pack" />
+          <h6>5-Day Detox Pack</h6>
+          <img src="images/4-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€39,95</p>
+        </li>
+
+        <li id="element34"><img src="images/ready-to-workout-pack.webp" alt="ready to workout pack" />
+          <h6>Ready to Workout Pack</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€71,80</p>
+        </li>
+
+        <li id="element35"><img src="images/beautiful-mix-pack.webp" alt="beautiful mix pack" />
+          <h6>Beautiful Mix Pack</h6>
+          <img src="images/0-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€39,95</p>
+        </li>
+
+        <li id="element36"><img src="images/giftset-with-box.webp" alt="giftset with box" />
+          <h6>Giftset with box</h6>
+          <img src="images/4-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€19,99</p>
+        </li>
+
+        <li id="element37"><img src="images/drinkflex-handdoek.webp" alt="drinkfles met handdoek" />
+          <h6>Drinkfles + Handdoek</h6>
+          <img src="images/5-sterren.png" alt="sterren beoordeling" class="stars" />
+          <p class="prijs">€44,95</p>
+        </li>
+      </ul>
+    </section>
+
+    <img class="yolanthe-image" src="images/bloom-club.jpg" alt="Yolanthe Cabau met de bloom club">
+    <div class="achtergrond-container">
+      <h4>Cabau Bloom Club</h4>
+      <h2>Ons loyaliteitsprogramma</h2>
+      <h3>Verdien spaarpunten elke keer je winkelt en wissel punten in voor exclusieve beloningen en voordelen. Word
+        lid van de Bloom Club en krijg meteen 75 spaarpunten.</h3>
+      <button class="button-style"> Meld je gratis aan</button>
+    </div>
+
+    <h4>Share what you love @cabaulifestyle</h4>
+    <h2>Our beautiful women</h2>
+
+    <section class="photo-grid">
+      <ul>
+        <li><img src="images/women-1.jpg" alt="image 1"></li>
+        <li><img src="images/women-2.jpg" alt="image 2"></li>
+        <li><img src="images/women-3.jpg" alt="image 3"></li>
+        <li><img src="images/women-4.jpg" alt="image 4"></li>
+        <li><img src="images/women-5.jpg" alt="image 5"></li>
+        <li><img src="images/women-6.jpg" alt="image 6"></li>
+      </ul>
+      <button class="button-women"> Meer weergeven </button>
+    </section>
+
+    <section class="review-section">
+      <a href="#" class="powervrouwen-link">Wat zeggen onze andere powervrouwen?</a>
+      <div class="rating-container">
+        <img src="images/4.5-sterren.png" alt="4,5 sterren beoordeling" class="rating-img">
+        <p class="beoordeling">50634 beoordelingen</p>
+      </div>
+
+      <hr class="divider">
+
+      <ul class="reviews">
+        <li class="review active">
+          <img src="images/5-sterren-vol.png" alt="5 sterren beoordeling">
+          <h5>Erg tevreden!</h5>
+          <p>"Erg tevreden over de producten en menu's!"</p>
+          <span>Chantal M.</span>
+        </li>
+        <li class="review active">
+          <img src="images/5-sterren-vol.png" alt="5 sterren beoordeling">
+          <h5>Net een milkshake</h5>
+          <p>"De smaak banaan is erg lekker. Het vult goed en is lekker makkelijk voor onderweg!"</p>
+          <span>Simone L.</span>
+        </li>
+        <li class="review active">
+          <img src="images/5-sterren-vol.png" alt="5 sterren beoordeling">
+          <h5>Iced Coffee</h5>
+          <p>"Iced Coffee heeft een hele lekkere smaak. Makkelijk te maken en is erg lekker."</p>
+          <span>Isa H.</span>
+        </li>
+        <li class="review active">
+          <img src="images/5-sterren-vol.png" alt="5 sterren beoordeling">
+          <h5>Hele fijne ervaring</h5>
+          <p>"Hele fijne ervaring. snelle levering en goede producten. Zeker aan te raden!"</p>
+          <span>Soraya K.</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="achtergrond-container">
+      <h6>Community</h6>
+      <p>
+        <a href="pagina1.html" class="link">Cabau App</a> | <a href="pagina2.html" class="link">Cabau Blog</a> | <a
+          href="pagina3.html" class="link">Cabau Subscriptions</a> |
+        <a href="pagina3.html" class="link">Giftcards</a> | <a href="pagina3.html" class="link">Creative Hub</a> |
+        <a href="pagina3.html" class="link">Succesverhalen</a> | <a href="pagina3.html" class="link">Bloom Talk</a> | <a
+          href="pagina3.html" class="link">Bloom Club</a>
+      </p>
+
+      <h6>Informatie</h6>
+      <p>
+        <a href="pagina1.html" class="link">Mijn account</a> | <a href="pagina2.html" class="link">Ons verhaal</a> | <a
+          href="pagina3.html" class="link">Vacatures</a> |
+        <a href="pagina3.html" class="link">Recensies</a> | <a href="pagina3.html" class="link">Retourneren</a> | <a
+          href="pagina3.html" class="link">Hulp & Ondersteuning</a> |
+        <a href="pagina3.html" class="link">Zakelijk / Samenwerken</a> | <a href="pagina3.html" class="link">Retail &
+          Partners</a>
+      </p>
+
+      <section class="loyaliteitsprogramma">
+        <img src="images/frame-footer.png" alt="Loyaliteitsprogramma" class="achtergrond-afbeelding">
+        <h6>Loyaliteitsprogramma</h6>
+        <p>Wordt gratis lid van onze Bloom Club en spaar voor korting, exclusieve producten en nog veel meer voordelen.
+        </p>
+        <a href="beloningen.html" class="link">Bekijk beloningen</a>
+      </section>
+
+      <h6>Ontvang 10% korting op de eerste order</h6>
+      <p>Meld je aan om op de hoogte te blijven van het laatste nieuws en de nieuwste producten.</p>
+
+      <div class="email-container">
+        <input type="email" placeholder="E-Mail" class="email-input">
+        <button class="submit-button">➔</button> <!-- Pijl naar rechts -->
+      </div>
+    </div>
+
+    <div class="social-media-container">
+      <a href="https://www.instagram.com/cabaulifestyle/" target="_blank">
+        <img src="images/instagram.png" alt="Logo Instagram" class="social-logo">
+      </a>
+      <a href="https://www.facebook.com/cabauxlifestyle" target="_blank">
+        <img src="images/facebook.png" alt="Logo Facebook" class="social-logo">
+      </a>
+      <a href="https://www.tiktok.com/@cabaulifestyle" target="_blank">
+        <img src="images/tiktok.png" alt="Logo TikTok" class="social-logo">
+      </a>
+      <a href="https://www.snapchat.com/add/cabaulifestyle?sender_web_id=a24d73a1-1968-45fc-8b0e-6d722a5519ec&device_type=desktop&is_copy_url=true"
+        target="_blank">
+        <img src="images/snapchat.png" alt="Logo Snapchat" class="social-logo">
+      </a>
+      <a href="https://nl.pinterest.com/cabaulifestyle/" target="_blank">
+        <img src="images/pinterest.png" alt="Logo Pinterest" class="social-logo">
+      </a>
+      <a href="https://www.youtube.com/c/CabauLifestyle" target="_blank">
+        <img src="images/youtube.png" alt="Logo YouTube" class="social-logo">
+      </a>
+      <a href="https://nl.linkedin.com/company/cabau-lifestyle" target="_blank">
+        <img src="images/linkdin.png" alt="Logo LinkedIn" class="social-logo">
+      </a>
+    </div>
+
+    <ul class="footer-links">
+      <li><a href="#" class="footer-link">Retourneren</a></li>
+      <li><a href="#" class="footer-link">Algemene voorwaarden</a></li>
+      <li><a href="#" class="footer-link">Privacy</a></li>
+    </ul>
+
+    <div class="social-media-container">
+      <img src="images/ideal.png" alt="Social Media Logo 1" class="betaal-logo">
+      <img src="images/klarna.png" alt="Social Media Logo 2" class="betaal-logo">
+      <img src="images/sofort.png" alt="Social Media Logo 3" class="betaal-logo">
+      <img src="images/bancontact.png" alt="Social Media Logo 3" class="betaal-logo">
+      <img src="images/maestro.png" alt="Social Media Logo 4" class="betaal-logo">
+      <img src="images/visa.png" alt="Social Media Logo 5" class="betaal-logo">
+      <img src="images/mastercard.png" alt="Social Media Logo 6" class="betaal-logo">
+      <img src="images/amex.png" alt="Social Media Logo 7" class="betaal-logo">
+    </div>
+
+  </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
-	
+
 </html>
