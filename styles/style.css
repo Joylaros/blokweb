@@ -71,48 +71,57 @@ body {
 }
 
 .overlay-container {
-	position: absolute;
-	top: 45%;
-	right: 15px;
-	transform: translateY(-50%);
-	text-align: right;
-	color: white;
-	z-index: 10;
+    position: absolute;
+    top: 45%;
+    right: 15px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: white;
+    z-index: 10;
+    opacity: 0; /* Begin met een ondoorzichtige overlay */
+    animation: fadeIn 3s forwards; /* Voeg de fade-in animatie toe */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Eindig met een volledig ondoorzichtige overlay */
+    }
 }
 
 .overlay-text {
-	margin: 30px 0;
-	text-align: right;
-	color: white;
-	line-height: 20px;
+    margin: 30px 0;
+    text-align: right;
+    color: white;
+    line-height: 20px;
 }
 
 .button-container {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 15px;
-	margin-left: 70px;
-	margin-right: 1px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-left: 70px;
+    margin-right: 1px;
 }
 
 .split-button {
-	flex: 1;
-	padding: 10px;
-	border: none;
-	cursor: pointer;
-	text-align: center;
-	min-width: 150px;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 150px;
 }
 
 .split-button.left {
-	background-color: #6a2c2d;
-	color: white;
+    background-color: #6a2c2d;
+    color: white;
 }
 
 .split-button.right {
-	background-color: white;
-	color: #6a2c2d;
+    background-color: white;
+    color: #6a2c2d;
 }
+
 
 .yolanthe-image {
 	margin-top: 30px;
@@ -236,22 +245,30 @@ nav {
 
 /* Linkergedeelte: hamburger en logo */
 .left-section {
-	display: flex;
-	align-items: center;
-	gap: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Verander deze waarde naar een kleinere waarde of verwijder het om ze dichter bij elkaar te brengen */
 }
 
 /* Hamburger menu stijl */
 .hamburger-menu img {
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
 }
+
+/* Optioneel: Voeg deze stijl toe voor het muziekicoon als je dat nog niet hebt gedaan */
+.music-icon img {
+    width: 30px; /* Pas deze waarde aan voor de grootte van het muziekicoon */
+    height: 30px; /* Zorg ervoor dat deze waarde consistent is met de breedte */
+}
+
 
 
 /* Logo stijl */
 .logo img {
-	width: 3cm;
+	width: 100px;
 	height: auto;
+	margin-left: 50px;
 
 }
 
@@ -832,78 +849,112 @@ body {
 }
 
 /************************************/
-/* Stijl voor de video carrousel */
+/* Stijl voor de swipeable video carrousel */
 /************************************/
 .videoCarrouselBackground {
-	background-color: #fff5f6;
-	padding: 20px;
-	border-radius: 10px;
-	margin: 20px;
-	font-family: 'Nunito', sans-serif;
-	font-size: 12px;
-	color: #6a2c2d;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+    background-color: #fff5f6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    color: #6a2c2d;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centreer de inhoud van de carrousel */
 }
 
 .generalText {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Centreer de tekst boven de video's */
 }
 
 .videoCarrouselBackground ul {
-	display: flex;
-	padding: 0;
-	list-style: none;
-	margin: 0;
-	overflow: hidden;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	width: 100%;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    overflow: auto; /* Sta scrollen toe voor het swipe effect */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
 }
 
 .videoCarrouselBackground ul li {
-	flex-basis: calc(50% - 1em);
-	flex-shrink: 0;
-	margin: 0 1em;
+    flex: none; /* Geen flex-basis, zodat ze niet uitrekken */
+    width: 50%; /* Breedte van elke video */
+    scroll-snap-align: start; /* Snap op de start van elk item */
+    margin-right: 1em; /* Voeg ruimte toe tussen de video's */
+}
+
+/* Verwijder de margin van de laatste video */
+.videoCarrouselBackground ul li:last-child {
+    margin-right: 0;
 }
 
 .videoWrapper {
-	max-width: 100%;
-	margin-top: 10px;
+    max-width: 100%;
+    margin-top: 10px;
 }
 
 .videoWrapper video {
-	width: 100%;
-	height: auto;
-	border: none;
+    width: 100%;
+    height: auto;
+    border: none;
 }
 
-/****************/
-/* DE BOLLETJES */
-/****************/
-.videoCarrouselBackground nav ul {
-	display: flex;
-	justify-content: center;
-	gap: 0.5em;
-	margin-top: 20px;
-	padding: 0;
+.highlight {
+    background-color: pink; /* Roze achtergrond */
+    padding: 0 4px; /* Voeg wat ruimte aan beide zijden van het woord toe */
 }
 
-.videoCarrouselBackground nav li {
-	width: 15px;
-	height: 15px;
+.bundleButton {
+    display: inline-block;
+    padding: 10px 20px; /* Pas de padding aan voor de knop */
+    background-color: #6a2c2d; /* Pas de achtergrondkleur aan */
+    color: white; /* Kleur van de tekst */
+    border: none; /* Verwijder de standaard rand */
+    border-radius: 5px; /* Maak de hoeken afgerond */
+    cursor: pointer; /* Verander de cursor bij hover */
+    text-align: center; /* Centreer de tekst */
+    margin-top: 10px; /* Voeg ruimte toe boven de knop */
+    text-decoration: none; /* Verwijder de onderstreping */
 }
 
-.videoCarrouselBackground nav a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-color: grey;
-	border-radius: 50%;
-	transition: background-color 0.3s;
+.bundleButton:hover {
+    background-color: #6a2c2d; /* Kleur bij hover */
 }
 
-.videoCarrouselBackground nav a.active {
-	background-color: red;
+/* Witte achtergrond voor de sectie */
+#twoElements {
+    background-color: white; /* Witte achtergrond voor de sectie */
+    padding: 20px; /* Voeg wat padding toe aan de sectie */
 }
+
+/* Optioneel: Zorg ervoor dat de tekstkleur goed zichtbaar is */
+#twoElements h2, #twoElements h3 {
+    color: #6a2c2d; /* Kleur van de tekst */
+}
+
+
+.gif-container {
+    text-align: center; /* Center the GIF */
+    margin-bottom: 0; /* Space between the GIF and the image below */
+}
+
+.motivational-gif {
+    max-width: 75%; /* Make the GIF responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+ 
+
+
+
+
+
+
+
+
+
+

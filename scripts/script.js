@@ -46,73 +46,62 @@ document.getElementById('prev').addEventListener('click', function() {
 
 
 
+const carousel = document.querySelector('#swipeableVideoCarousel ul');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-function createCustomCarrousel(carrouselID) {
-    let carrousel = document.querySelector("#" + carrouselID);
-    let carrouselElementsContainer = carrousel.querySelector(":scope > ul");
-    let carrouselElements = carrouselElementsContainer.querySelectorAll("li");
-    let bolletjes = carrousel.querySelectorAll(":scope > nav a");
+carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carousel.classList.add('active');
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+});
 
-    function iniBolletjes() {
-        for (let bolletje of bolletjes) {
-            bolletje.addEventListener("click", function (e) {
-                e.preventDefault();
-                let index = Array.from(bolletjes).indexOf(this); // Bepaal welke bolletje is geklikt
-                let startElementIndex = index * 2; // Bepaal de start index voor de rechthoeken
+carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
 
-                // Scroll naar de juiste positie
-                carrouselElementsContainer.scrollTo({
-                    left: carrouselElements[startElementIndex].offsetLeft,
-                    behavior: 'smooth'
-                });
+carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.classList.remove('active');
+});
 
-                // Update de huidige elementen en bolletjes
-                updateCurrentElements(startElementIndex);
-                updateBolletjes(index);
-            });
-        }
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return; // stop the fn from running
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.querySelector('.overlay-container');
+    overlay.classList.add('visible'); // Voeg de class toe voor de fade-in
+});
+
+
+// Auto-play music when the page loads
+window.addEventListener('load', () => {
+    const audio = document.getElementById('background-music');
+    audio.play().catch(error => {
+        console.log("Music playback prevented: ", error);
+    });
+});
+
+// Toggle music play/pause on icon click
+document.getElementById('music-toggle').addEventListener('click', () => {
+    const audio = document.getElementById('background-music');
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
     }
-
-    function iniStartPosition() {
-        updateCurrentElements(0); // Toont rechthoek 1 en 2
-        updateBolletjes(0); // Actieve bolletje instellen
-        carrouselElementsContainer.scrollLeft = 0;
-    }
-
-    function updateCurrentElements(startIndex) {
-        // Verwijder 'current' van alle elementen
-        carrouselElements.forEach(el => el.classList.remove("current"));
-
-        // Voeg 'current' toe aan de juiste elementen
-        if (carrouselElements[startIndex]) {
-            carrouselElements[startIndex].classList.add("current");
-        }
-        if (carrouselElements[startIndex + 1]) {
-            carrouselElements[startIndex + 1].classList.add("current");
-        }
-    }
-
-    function updateBolletjes(index) {
-        // Verwijder 'active' van alle bolletjes en voeg 'inactive' toe
-        bolletjes.forEach((b, i) => {
-            b.classList.remove("active");
-            b.classList.add("inactive");
-        });
-
-        // Voeg 'active' toe aan de juiste bolletje
-        bolletjes[index].classList.add("active");
-        bolletjes[index].classList.remove("inactive");
-    }
-
-    iniBolletjes();
-    iniStartPosition();
-}
-
-// De carrousel creëren na het laden van de pagina
-(function () {
-    createCustomCarrousel("twoElements");
-})();
+});
 
 
+
+  
 
 
